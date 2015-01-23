@@ -2,7 +2,7 @@
 I'm having trouble with a pretty basic issue, I have two text variables, one is a string and the other is char[], how would i go about combining them into a third string variable with the text from the char[] appended on the end
 
 ##A:##
-<yazd at freenode.net>
+yazd at freenode.net
 
 ```d
 string output = one ~ other.idup;
