@@ -243,3 +243,5 @@ Usage:
 MyClass obj = new MyClass;
 
 obj.doSomething(10);
+
+Note: You can not access private or protected members on MyClass.
