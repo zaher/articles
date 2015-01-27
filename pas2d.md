@@ -227,3 +227,21 @@ version(windows){
 //only for windows platform
 }
 ```
+
+Helper
+======
+You dont need add help of class, just add global functions with paramter type of your class as first parameter.
+
+class MyClass{
+}
+
+void doSomething(MyClass obj, int x){
+}
+
+Usage:
+
+MyClass obj = new MyClass;
+
+obj.doSomething(10);
+
+Note: You can not access private or protected members on MyClass.
