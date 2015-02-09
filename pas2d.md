@@ -228,6 +228,40 @@ version(windows){
 }
 ```
 
+You can define it also like this example
+```D
+
+import std.stdio;
+
+debug(everything)
+{
+    debug = level1;
+    debug = level2;
+    version = beta;
+}
+
+void main()
+{
+    debug(level1) writeln("level1...");
+    debug(level2) writeln("level2...");
+    version(beta) writeln("it is beta version");
+}
+```
+
+And you can use "static if" to check condition at compile time, and stop the compilation useing "static assert"
+
+```
+struct MyType(T)
+{
+    static if (is (T == float)) {
+        static assert(false, "float type is not supported");
+    }
+}
+```
+
+ref:http://ddili.org/ders/d.en/cond_comp.html
+
+
 Helper
 ======
 You dont need add help of class, just add global functions with paramter type of your class as first parameter.

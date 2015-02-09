@@ -37,6 +37,7 @@ Oh, and to remove the ambiguity, it doesn't modify the original range; but retur
 
 ##Q##
 Is there any way to do auto parameters for functions?
+
 ##A##
 - fun(T)(T param)
   (IFTI)
@@ -46,9 +47,29 @@ Is there any way to do auto parameters for functions?
 - Oh, so without specifying T it would be deduced from param?
 - Yes
 
+
+##Q##
 Can I make a function taking (only) a string[] also callable using multiple string arguments?
 
-
-
-
+##A##
 void foo(string[] args...) {} foo(["a", "b"]); foo("a", "b", "c"); // both valid
+
+##Q##
+Retruve application location/path
+
+##A##
+```d
+import std.file;
+writeln(thisExePath());
+```
+
+##Q##
+Get last element in array
+
+##A##
+
+```d
+a = a[sources.length-1];
+a = a[$-1];        
+a = a.back;
+```
