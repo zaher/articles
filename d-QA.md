@@ -46,3 +46,9 @@ Is there any way to do auto parameters for functions?
 - Oh, so without specifying T it would be deduced from param?
 - Yes
 
+Can I make a function taking (only) a string[] also callable using multiple string arguments?
+
+
+
+
+void foo(string[] args...) {} foo(["a", "b"]); foo("a", "b", "c"); // both valid
